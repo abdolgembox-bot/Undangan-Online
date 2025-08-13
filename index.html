@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Undangan Pernikahan — Muhammad Nur Rofi'i & Sumiatun</title>
+  <meta name="description" content="Undangan pernikahan Muhammad Nur Rofi'i & Sumiatun. Mohon doa restu dan kehadirannya." />
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f5f0; color:#333;}
+    header {text-align:center; padding:30px; background:#fff8f0;}
+    h1 {font-size:2em; margin-bottom:10px;}
+    p {margin:5px 0;}
+    main {max-width:800px; margin:20px auto; padding:20px; background:#fff; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.05);}
+    section {margin-bottom:20px;}
+    iframe {width:100%; border:0; border-radius:10px;}
+    a.button {display:inline-block; padding:10px 20px; background:#a67c52; color:#fff; text-decoration:none; border-radius:5px;}
+    #countdown {font-size:1.5em; color:#a67c52; margin-top:10px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Muhammad Nur Rofi'i ♡ Sumiatun</h1>
+    <p>Sabtu, 27 September 2025</p>
+    <p>Akad Nikah: 07.00 WIB - selesai</p>
+    <p>Resepsi: 09.00 WIB - selesai</p>
+    <p>Lokasi: Dk Bulakan RT. 02 RW 07 Desa Pilang, Kec. Randublatung, Kab. Blora</p>
+    <div id="countdown"></div>
+  </header>
+  <main>
+    <section>
+      <h2>Peta Lokasi</h2>
+      <iframe src="https://www.google.com/maps?q=Dk+Bulakan+RT+02+RW+07+Desa+Pilang+Randublatung+Blora&output=embed" height="300" allowfullscreen loading="lazy"></iframe>
+      <p style="text-align:center; margin-top:10px;"><a class="button" href="https://www.google.com/maps?q=Dk+Bulakan+RT+02+RW+07+Desa+Pilang+Randublatung+Blora" target="_blank">Buka di Google Maps</a></p>
+    </section>
+    <section>
+      <h2>Link Musik</h2>
+      <p><a class="button" href="https://www.youtube.com/watch?v=ZeFpigRaXbI&list=RDZeFpigRaXbI&start_radio=1" target="_blank">Putar Musik</a></p>
+    </section>
+    <section>
+      <h2>RSVP</h2>
+      <p>Konfirmasi Kehadiran via WhatsApp:</p>
+      <p><a class="button" href="https://wa.me/6281234567890?text=Assalamualaikum,%20saya%20akan%20menghadiri%20acara%20Muhammad%20Nur%20Rofi'i%20dan%20Sumiatun%20pada%2027%20September%202025." target="_blank">Kirim Konfirmasi</a></p>
+    </section>
+  </main>
+  <script>
+    const countdown = document.getElementById('countdown');
+    const eventDate = new Date('2025-09-27T07:00:00+07:00').getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+      if (distance < 0) {
+        countdown.innerHTML = 'Acara sedang berlangsung';
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    }, 1000);
+  </script>
+</body>
+</html>
